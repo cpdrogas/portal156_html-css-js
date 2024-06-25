@@ -1,0 +1,12 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+fieldset {
+    /* border: none; */
+    width: 50%; 
+    margin: 0px auto;
+    align-items: center;
+    justify-content: center;
+    /* display: flexbox; */
+}
