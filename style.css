@@ -128,8 +128,6 @@ textarea {
 footer {
     width: 100%;
     text-align: center;
-
-    flex-direction: row;
     padding: 20px;
     background-color: #FFA500;
     border-top: 1px solid #ccc;
