@@ -4,186 +4,136 @@
 
 body {
     background-color: #f8f9fa;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+header {
+    background-color: #FFA500;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.header-content p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 main {
-    text-align: center; /* Alinha o conteúdo no centro */
-    margin: 20px auto; /* Centraliza na página */
-    max-width: 800px; /* Define a largura máxima */
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
 }
 
 .main-title {
-    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
-
-
-/* fieldset {
-    margin: 20px 0;
-} */
 
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.radio-option {
+fieldset {
+    width: 100%; 
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.radio-option, .radio-options label {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.radio-option input[type="radio"] {
+.radio-option input[type="radio"], .radio-options input[type="radio"] {
     margin-right: 10px;
 }
 
 .radio-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Espaçamento entre os inputs */
+    gap: 10px;
 }
 
-.radio-options label {
-    display: inline-flex; /* Alinha os inputs lado a lado */
-    align-items: center; /* Alinha verticalmente */
-}
-
-.radio-options input[type="radio"] {
-    margin-right: 5px; /* Espaçamento entre o input e o texto */
-}
-
-fieldset {
-    margin: 20px 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.radio-option {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.radio-option input[type="radio"] {
-    margin-right: 5px;
-}
-
-fieldset {
-    margin: 20px 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.checkbox-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Espaçamento entre os checkboxes */
-}
-
-.checkbox-options label {
-    display: inline-flex; /* Alinha os checkboxes lado a lado */
-    align-items: center; /* Alinha verticalmente */
-}
-
-.checkbox-options input[type="checkbox"] {
-    margin-right: 5px; /* Espaçamento entre o checkbox e o texto */
-}
-
-
-
-/* Estilização básica dos inputs de texto */
-input[type="text"] {
-    width: 300px; /* Largura ajustada */
-    padding: 8px 8px; /* Espaçamento interno */
-    margin: 8px 0; /* Margem entre os inputs */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
-    border: 2px solid #ccc; /* Borda */
-    border-radius: 4px; /* Borda arredondada */
-    font-size: 14px; /* Tamanho da fonte */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
-}
-
-/* Estilização dos inputs de texto ao focar */
-input[type="text"]:focus {
-    border-color: #008B8B; /* Cor da borda ao focar */
-    outline: none; /* Remove o contorno padrão */
-    box-shadow: 0 0 5px rgba(0, 139, 139, 0.5); /* Sombra ao focar */
-}
-
-input[type="number"] {
-    width: 80px;
-    padding: 8px 8px;
+input[type="text"], input[type="number"], select, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
     margin: 8px 0;
     border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-select {
-    width: 80;
-    padding: 8px 8px;
-    margin: 2px solid #ccc;
+input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+    border-color: #008B8B;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 139, 139, 0.5);
 }
 
-optgroup {
-    width: 80;
-    padding: 8px 8px;
-    margin: 8px 0;
-    border: 2px solid #ccc;
+textarea {
+    resize: vertical;
 }
 
-
-fieldset {
-    /* border: none; */
-    width: 50%; 
-    margin: 0px auto;
-    align-items: center;
-    justify-content: center;
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
     border: none;
-    /* display: flexbox; */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button {
-    background-color: #4CAF50; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    padding: 15px 20px; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 5px; /* Borda arredondada */
-    font-size: 16px; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+.submit-button:hover {
+    background-color: #45a049;
 }
 
-button:hover {
-    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+.submit-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
-
-button:active {
-    background-color: #3e8e41; /* Cor de fundo ao clicar */
-    box-shadow: 0 5px #666; /* Sombra ao clicar */
-    transform: translateY(4px); /* Efeito de clique */
-}
-
 
 footer {
-    display: flex;
-    justify-content: space-between; /* Adapta o espaçamento entre os itens */
-    align-items: center; /* Alinha verticalmente os itens ao centro */
-    padding: 20px; /* Adiciona espaçamento ao redor do footer */
-    background-color: #FFA500; /* Cor de fundo do footer (opcional) */
-}
+    width: 100%;
+    text-align: center;
 
-.footer {
-    flex: 1; /* Faz com que cada seção ocupe a mesma largura */
-    margin: 10px; /* Adiciona espaço ao redor das seções */
-}
-
-.footer img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da seção */
-    height: auto; /* Mantém a proporção da imagem */
+    flex-direction: row;
+    padding: 20px;
+    background-color: #FFA500;
+    border-top: 1px solid #ccc;
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
