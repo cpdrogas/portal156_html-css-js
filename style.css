@@ -1,35 +1,47 @@
+:root {
+    --primary-color: #FFA500;
+    --secondary-color: #4CAF50;
+    --focus-color: #008B8B;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    min-height: 100vh;
 }
 
 header {
-    background-color: #FFA500;
-    width: 100%;
+    background-color: var(--primary-color);
+    max-width: 800px; /* Define uma largura máxima para o header */
+    width: 100%; /* Garante que o header ocupe 100% da largura definida */
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza o header horizontalmente */
 }
 
 .header-content h1 {
     font-size: 24px;
     margin: 0;
     text-transform: uppercase;
+    color: var(--text-color);
 }
 
 .header-content p {
     margin: 10px 0 0 0;
     font-size: 16px;
     line-height: 1.5;
+    color: var(--text-color);
 }
 
 main {
@@ -47,6 +59,7 @@ main {
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 form {
@@ -95,7 +108,7 @@ input[type="text"], input[type="number"], select, textarea {
 }
 
 input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
-    border-color: #008B8B;
+    border-color: var(--focus-color);
     outline: none;
     box-shadow: 0 0 5px rgba(0, 139, 139, 0.5);
 }
@@ -105,7 +118,7 @@ textarea {
 }
 
 .submit-button {
-    background-color: #4CAF50;
+    background-color: var(--secondary-color);
     color: white;
     padding: 15px 20px;
     border: none;
@@ -129,7 +142,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 20px;
-    background-color: #FFA500;
+    background-color: var(--primary-color);
     border-top: 1px solid #ccc;
     position: relative;
     bottom: 0;
