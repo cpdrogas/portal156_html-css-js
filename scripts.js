@@ -1,100 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const bairros = {
-        "Aerolândia": { regional: "Regional 6", territorio: "Território 26" },
-        "Aldeota": { regional: "Regional 2", territorio: "Território 7" },
-        "Alto da Balança": { regional: "Regional 6", territorio: "Território 26" },
-        "Álvaro Weyne": { regional: "Regional 1", territorio: "Território 6" },
-        "Antônio Bezerra": { regional: "Regional 3", territorio: "Território 11" },
-        "Bairro Aeroporto": { regional: "Regional 4", territorio: "Território 18" },
-        "Bairro de Fátima": { regional: "Regional 4", territorio: "Território 15" },
-        "Barra do Ceará": { regional: "Regional 1", territorio: "Território 3" },
-        "Bela Vista": { regional: "Regional 11", territorio: "Território 36" },
-        "Benfica": { regional: "Regional 4", territorio: "Território 15" },
-        "Boa Vista": { regional: "Regional 8", territorio: "Território 20" },
-        "Bom Jardim": { regional: "Regional 5", territorio: "Território 39" },
-        "Cais do Porto": { regional: "Regional 2", territorio: "Território 9" },
-        "Cajazeiras": { regional: "Regional 9", territorio: "Território 31" },
-        "Cambeba": { regional: "Regional 6", territorio: "Território 28" },
-        "Castelão": { regional: "Regional 8", territorio: "Território 20" },
-        "Centro": { regional: "Regional 12", territorio: "Território 1" },
-        "Cidade 2000": { regional: "Regional 7", territorio: "Território 23" },
-        "Cidade dos Funcionários": { regional: "Regional 6", territorio: "Território 27" },
-        "Cocó": { regional: "Regional 7", territorio: "Território 23" },
-        "Conjunto Ceará I": { regional: "Regional 11", territorio: "Território 38" },
-        "Conjunto Ceará II": { regional: "Regional 11", territorio: "Território 38" },
-        "Conjunto Esperança": { regional: "Regional 10", territorio: "Território 34" },
-        "Conjunto Palmeiras": { regional: "Regional 9", territorio: "Território 32" },
-        "Curió": { regional: "Regional 6", territorio: "Território 29" },
-        "Damas": { regional: "Regional 4", territorio: "Território 16" },
-        "De Lourdes": { regional: "Regional 2", territorio: "Território 8" },
-        "Dias Macedo": { regional: "Regional 8", territorio: "Território 20" },
-        "Engenheiro Luciano Cavalcante": { regional: "Regional 7", territorio: "Território 24" },
-        "Farias Brito": { regional: "Regional 3", territorio: "Território 13" },
-        "Floresta": { regional: "Regional 1", territorio: "Território 6" },
-        "Genibaú": { regional: "Regional 11", territorio: "Território 38" },
-        "Goiabeiras": { regional: "Regional 1", territorio: "Território 3" },
-        "Guajerú": { regional: "Regional 6", territorio: "Território 29" },
-        "Guararapes": { regional: "Regional 7", territorio: "Território 24" },
-        "Icaraí": { regional: "Regional 3", territorio: "Território 14" },
-        "Itaperi": { regional: "Regional 8", territorio: "Território 19" },
-        "Jacarecanga": { regional: "Regional 1", territorio: "Território 5" },
-        "Jangurussu": { regional: "Regional 9", territorio: "Território 32" },
-        "Jardim América": { regional: "Regional 4", territorio: "Território 16" },
-        "Jardim das Oliveiras": { regional: "Regional 6", territorio: "Território 27" },
-        "Jardim Guanabara": { regional: "Regional 1", territorio: "Território 2" },
-        "Jardim Iracema": { regional: "Regional 1", territorio: "Território 6" },
-        "João XXIII": { regional: "Regional 11", territorio: "Território 37" },
-        "José Bonifácio": { regional: "Regional 4", territorio: "Território 15" },
-        "José de Alencar": { regional: "Regional 6", territorio: "Território 29" },
-        "Lagoa Redonda": { regional: "Regional 6", territorio: "Território 29" },
-        "Lagoa Sapiranga (Coité)": { regional: "Regional 7", territorio: "Território 25" },
-        "Manuel Sátiro": { regional: "Regional 10", territorio: "Território 35" },
-        "Maraponga": { regional: "Regional 10", territorio: "Território 35" },
-        "Messejana": { regional: "Regional 6", territorio: "Território 28" },
-        "Monte Castelo": { regional: "Regional 3", territorio: "Território 13" },
-        "Mucuripe": { regional: "Regional 2", territorio: "Território 9" },
-        "Padre Andrade": { regional: "Regional 3", territorio: "Território 12" },
-        "Panamericano": { regional: "Regional 11", territorio: "Território 36" },
-        "Parangaba": { regional: "Regional 4", territorio: "Território 17" },
-        "Parque Araxá": { regional: "Regional 3", territorio: "Território 14" },
-        "Parque Iracema": { regional: "Regional 6", territorio: "Território 28" },
-        "Parque Manibura": { regional: "Regional 6", territorio: "Território 27" },
-        "Parque Presidente Vargas": { regional: "Regional 10", territorio: "Território 34" },
-        "Parque Santa Maria": { regional: "Regional 9", territorio: "Território 33" },
-        "Parque São José": { regional: "Regional 10", territorio: "Território 34" },
-        "Parquelândia": { regional: "Regional 3", territorio: "Território 14" },
-        "Passaré": { regional: "Regional 8", territorio: "Território 20" },
-        "Patriolino Ribeiro": { regional: "Regional 3", territorio: "Território 14" },
-        "Paupina": { regional: "Regional 6", territorio: "Território 30" },
-        "Pici": { regional: "Regional 11", territorio: "Território 36" },
-        "Planalto Ayrton Senna": { regional: "Regional 8", territorio: "Território 21" },
-        "Planalto Ben Moreira": { regional: "Regional 10", territorio: "Território 34" },
-        "Planalto Vitória": { regional: "Regional 10", territorio: "Território 34" },
-        "Praia de Iracema": { regional: "Regional 12", territorio: "Território 1" },
-        "Prefeito José Walter": { regional: "Regional 8", territorio: "Território 21" },
-        "Presidente Kennedy": { regional: "Regional 3", territorio: "Território 12" },
-        "Presidente Vargas": { regional: "Regional 10", territorio: "Território 34" },
-        "Quintino Cunha": { regional: "Regional 3", territorio: "Território 12" },
-        "Rodolfo Teófilo": { regional: "Regional 3", territorio: "Território 13" },
-        "Sabiaguaba": { regional: "Regional 7", territorio: "Território 25" },
-        "Serrinha": { regional: "Regional 8", territorio: "Território 19" },
-        "Siqueira": { regional: "Regional 10", territorio: "Território 35" },
-        "Vila Peri": { regional: "Regional 4", territorio: "Território 17" },
-        "Vila União": { regional: "Regional 6", territorio: "Território 26" },
-        "Vila Velha": { regional: "Regional 1", territorio: "Território 4" }
-    };
+function toggleOutrosText() {
+    var radio = document.getElementById('pergunta1_outros');
+    var textInput = document.getElementById('pergunta1_outros_text');
+    if (radio.checked) {
+        textInput.style.display = 'inline-block'; // Mostra o campo de texto
+    } else {
+        textInput.style.display = 'none'; // Oculta o campo de texto
+    }
+}
 
-    document.getElementById('bairros').addEventListener('change', function () {
-        const bairro = this.value;
-        const regionalElement = document.getElementById('regional');
-        const territorioElement = document.getElementById('territorio');
-        
-        if (bairros[bairro]) {
-            regionalElement.textContent = 'Regional: ' + bairros[bairro].regional;
-            territorioElement.textContent = 'Território: ' + bairros[bairro].territorio;
-        } else {
-            regionalElement.textContent = '';
-            territorioElement.textContent = '';
-        }
-    });
-});
+ // Função para exibir/esconder a caixa de texto
+ function toggleOutraSubstancia() {
+    var checkbox = document.getElementById('outra');
+    var textInput = document.getElementById('outra_substancia');
+    if (checkbox.checked) {
+        textInput.style.display = 'block';
+    } else {
+        textInput.style.display = 'none';
+    }
+}

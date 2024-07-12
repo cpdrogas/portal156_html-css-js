@@ -99,6 +99,21 @@ legend {
 
 }
 
+.radio-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-option {
+    margin-bottom: 8px;
+}
+
+.radio-option input[type="text"] {
+    margin-left: 8px;
+    width: 200px; /* Largura do campo de texto */
+    display: none; /* Inicialmente oculto */
+}
+
 input[type="text"], input[type="number"], select, textarea {
     width: calc(100% - 20px);
     padding: 10px;
@@ -113,6 +128,27 @@ input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:foc
     border-color: var(--focus-color);
     outline: none;
     box-shadow: 0 0 5px rgba(0, 139, 139, 0.5);
+}
+
+.checkbox-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Espaçamento opcional entre os checkboxes */
+}
+
+.checkbox-option input[type="text"] {
+    margin-left: 8px; /* Espaçamento entre o checkbox "Outra" e o campo de texto */
+}
+
+/* Estilização da caixa de texto */
+#outra_substancia {
+    width: 200px; /* Largura menor */
+    display: none; /* Esconde a caixa de texto por padrão */
 }
 
 textarea {
