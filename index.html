@@ -26,25 +26,25 @@
                 <fieldset>
                     <legend>1. Por gentileza, nos informe se é você que precisa de ajuda ou alguém que você conhece e, neste caso, nos informe o seu grau de proximidade com esta pessoa.</legend>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" value="eu" onclick="toggleOutrosText()"> Eu sou a pessoa com problema decorrente do uso de drogas lícitas e ilícitas
+                        <input type="radio" name="pergunta1" value="eu"> Eu sou a pessoa com problema decorrente do uso de drogas lícitas e ilícitas
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" value="familiar" onclick="toggleOutrosText()"> Eu sou um familiar
+                        <input type="radio" name="pergunta1" value="familiar"> Eu sou um familiar
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" value="amigo" onclick="toggleOutrosText()"> Eu sou um amigo (a)
+                        <input type="radio" name="pergunta1" value="amigo"> Eu sou um amigo (a)
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" value="conhecido" onclick="toggleOutrosText()"> Eu sou apenas um conhecido
+                        <input type="radio" name="pergunta1" value="conhecido"> Eu sou apenas um conhecido
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" value="profissional" onclick="toggleOutrosText()"> Eu sou um profissional técnico
+                        <input type="radio" name="pergunta1" value="profissional"> Eu sou um profissional técnico
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" value="nao_identificar" onclick="toggleOutrosText()"> Não quero me identificar
+                        <input type="radio" name="pergunta1" value="nao_identificar"> Não quero me identificar
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" id="pergunta1_outros" value="outros" onclick="toggleOutrosText()">
+                        <input type="radio" name="pergunta1" id="pergunta1_outros" value="outros">
                         Outros: <input type="text" id="pergunta1_outros_text" name="pergunta1_outros_text" placeholder="Digite aqui, por gentileza" style="display: none;">
                     </label>
                 </fieldset>
@@ -231,84 +231,70 @@
                 <fieldset>
                     <legend>9. Agora, assinale a substância ou às substâncias psicoativas que a pessoa que precisa de ajuda faz uso:</legend>
                     <div class="checkbox-options">
-                        <div class="checkbox-option">
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="alcool" value="Álcool">
-                            <label for="alcool">Álcool</label>
-                        </div>
-                
-                        <div class="checkbox-option">
+                            Álcool
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="tabaco" value="Tabaco/Cigarro">
-                            <label for="tabaco">Tabaco/Cigarro</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Tabaco/Cigarro
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="crack" value="Crack: (Mesclado, Pitico, Raspa)">
-                            <label for="crack">Crack: (Mesclado, Pitico, Raspa)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Crack: (Mesclado, Pitico, Raspa)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="maconha" value="Maconha: (Skank, haxixe, k2)">
-                            <label for="maconha">Maconha: (Skank, haxixe, k2)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Maconha: (Skank, haxixe, k2)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="cocaina" value="Cocaína: (Merla, Oxi...)">
-                            <label for="cocaina">Cocaína: (Merla, Oxi...)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Cocaína: (Merla, Oxi...)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="solventes" value="Solventes: (Cola, loló, lança perfume, anti-respingo de solda)">
-                            <label for="solventes">Solventes: (Cola, loló, lança perfume, anti-respingo de solda)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Solventes: (Cola, loló, lança perfume, anti-respingo de solda)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="tranquilizantes" value="Tranquilizantes: (Diazepam, Rivotril, rupinol..)">
-                            <label for="tranquilizantes">Tranquilizantes: (Diazepam, Rivotril, rupinol..)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Tranquilizantes: (Diazepam, Rivotril, rupinol..)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="anestesicos" value="Anestésicos: (Boa noite cinderela, Ketamina)">
-                            <label for="anestesicos">Anestésicos: (Boa noite cinderela, Ketamina)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Anestésicos: (Boa noite cinderela, Ketamina)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="alucinogenos_naturais" value="Alucinógenos naturais: (Cogumelo, zabumba, Ayahuasca, Sto Daime, Ibogaína)">
-                            <label for="alucinogenos_naturais">Alucinógenos naturais: (Cogumelo, zabumba, Ayahuasca, Sto Daime, Ibogaína)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Alucinógenos naturais: (Cogumelo, zabumba, Ayahuasca, Sto Daime, Ibogaína)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="alucinogenos_sinteticos" value="Alucinógenos sintéticos: (LSD, Doce, DMT, aranha)">
-                            <label for="alucinogenos_sinteticos">Alucinógenos sintéticos: (LSD, Doce, DMT, aranha)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Alucinógenos sintéticos: (LSD, Doce, DMT, aranha)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="ecstasy" value="Ecstasy: (Bala, MDMA, MD, Mandy)">
-                            <label for="ecstasy">Ecstasy: (Bala, MDMA, MD, Mandy)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Ecstasy: (Bala, MDMA, MD, Mandy)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="anfetaminas" value="Anfetaminas: (Rebite, speed, ritalina)">
-                            <label for="anfetaminas">Anfetaminas: (Rebite, speed, ritalina)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Anfetaminas: (Rebite, speed, ritalina)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="opioides" value="Opióides: (Remédios para dor, morfina, metadona, tramal)">
-                            <label for="opioides">Opióides: (Remédios para dor, morfina, metadona, tramal)</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Opióides: (Remédios para dor, morfina, metadona, tramal)
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="heroina" value="Heroína">
-                            <label for="heroina">Heroína</label>
-                        </div>
-                    
-                        <div class="checkbox-option">
+                            Heroína
+                        </label>
+                        <label class="checkbox-option">
                             <input type="checkbox" name="substance" id="outra" value="Outra" onclick="toggleOutraSubstancia()">
-                            <label for="outra">Outra (as)</label>
-                        </div>
+                            Outra (as)
+                        </label>
                         <input type="text" name="outra_substancia" id="outra_substancia">
                     </div>
-                    </div>
                 </fieldset>
+                
                 
                
                 <fieldset>

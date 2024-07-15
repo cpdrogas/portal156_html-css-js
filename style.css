@@ -81,6 +81,8 @@ legend {
     margin-bottom: 10px;
 }
 
+
+
 .radio-option, .radio-options label {
     display: flex;
     align-items: center;
@@ -116,6 +118,7 @@ input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:foc
     box-shadow: 0 0 5px rgba(0, 139, 139, 0.5);
 }
 
+
 .checkbox-options {
     display: flex;
     flex-direction: column;
@@ -125,6 +128,10 @@ input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:foc
     display: flex;
     align-items: center;
     margin-bottom: 8px; /* Espaçamento opcional entre os checkboxes */
+}
+
+.checkbox-option input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 .checkbox-option input[type="text"] {
