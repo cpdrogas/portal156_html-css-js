@@ -1,3 +1,5 @@
+import from "./confirm";
+
 const json = localStorage.getItem('form');
 const obj = JSON.parse(json);
 
