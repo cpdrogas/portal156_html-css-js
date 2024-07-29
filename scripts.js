@@ -1,3 +1,26 @@
+// Sintaxe: localStorage.getItem('chave');
+
+// Exemplo
+const nome = localStorage.getItem('nome');
+console.log(nome); // Saída: João
+
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData();
+    
+    // for (item of fd) {
+    //     console.log(item)
+    // }
+
+    const json = JSON.stringify(obj);
+    localStorage.setItem('form', json);
+
+    window.location.href = "confirm";
+
+})
+
 function toggleOutrosText() {
     var radios = document.getElementsByName('pergunta1');
     var textInput = document.getElementById('pergunta1_outros_text');
