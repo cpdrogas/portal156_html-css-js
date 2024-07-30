@@ -1,13 +1,17 @@
-import from "./confirm";
+document.addEventListener('DOMContentLoaded', function() {
+    const json = localStorage.getItem('form');
+    if (json) {
+        const obj = JSON.parse(json);
 
-const json = localStorage.getItem('form');
-const obj = JSON.parse(json);
-
-for (key in obj) {
-    const markup = `
-    <div> 
-        <span>${key}: ${obj[key]}</span>
-    </div>
-    `;
-    document.getElementById('data').inner += markup; 
-}
+        for (const key in obj) {
+            const markup = `
+            <div class="data-item"> 
+                <span>${key}:</span> ${obj[key]}
+            </div>
+            `;
+            document.getElementById('data').innerHTML += markup; 
+        }
+    } else {
+        document.getElementById('data').innerHTML = '<p>Nenhum dado encontrado.</p>';
+    }
+});

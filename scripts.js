@@ -1,24 +1,18 @@
-// Sintaxe: localStorage.getItem('chave');
-
-// Exemplo
-const nome = localStorage.getItem('nome');
-console.log(nome); // Saída: João
-
-const form = document.querySelector('form')
+const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const fd = new FormData();
-    
-    // for (item of fd) {
-    //     console.log(item)
-    // }
+    const fd = new FormData(form);
+    const obj = {};
 
-    const json = JSON.stringify(obj);
-    localStorage.setItem('form', json);
+    for (const [key, value] of fd.entries()) {
+        obj[key] = value;
 
-    window.location.href = "confirm";
+        const json = JSON.stringify(obj);
+        localStorage.setItem('form', json);
 
+        window.location.href = "confirm.html"
+    }
 })
 
 function toggleOutrosText() {
