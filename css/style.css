@@ -63,8 +63,8 @@ main {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+     display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
     align-items: center;
 }
 
@@ -80,6 +80,8 @@ legend {
     font-weight: bold;
     margin-bottom: 10px;
 }
+
+
 
 .radio-option, .radio-options label {
     display: flex;
@@ -99,6 +101,7 @@ legend {
 
 }
 
+
 input[type="text"], input[type="number"], select, textarea {
     width: calc(100% - 20px);
     padding: 10px;
@@ -113,6 +116,32 @@ input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:foc
     border-color: var(--focus-color);
     outline: none;
     box-shadow: 0 0 5px rgba(0, 139, 139, 0.5);
+}
+
+
+.checkbox-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Espaçamento opcional entre os checkboxes */
+}
+
+.checkbox-option input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-option input[type="text"] {
+    margin-left: 8px; /* Espaçamento entre o checkbox "Outra" e o campo de texto */
+}
+
+/* Estilização da caixa de texto */
+#outra_substancia {
+    width: 200px; /* Largura menor */
+    display: none; /* Esconde a caixa de texto por padrão */
 }
 
 textarea {
@@ -142,11 +171,33 @@ textarea {
 
 footer {
     width: 100%;
-    text-align: center;
     padding: 20px;
+    padding-left: 60px;
     background-color: var(--primary-color);
-    border-top: 1px solid #ccc;
-    position: relative;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: center;
+    
+}
+
+figure {
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color); /* Cor do texto */
+}
+
+h4 {
+    margin: 0; /* Remove margens padrão do título */
+}
+
+address {
+    font-style: normal; /* Garante que o endereço não seja itálico */
+    margin-top: 5px; /* Espaçamento acima do endereço */
 }

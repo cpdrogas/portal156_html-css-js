@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="reset.css"> --> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Coordenadoria Especial de Políticas sobre Drogas</title>
 </head>
 <body>
@@ -44,8 +44,8 @@
                         <input type="radio" name="pergunta1" value="nao_identificar"> Não quero me identificar
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="pergunta1" value="outros">
-                        Outros: <input type="text" name="pergunta1_outros" placeholder="Digite aqui, por gentileza">
+                        <input type="radio" name="pergunta1" id="pergunta1_outros" value="outros">
+                        Outros: <input type="text" id="pergunta1_outros_text" name="pergunta1_outros_text" placeholder="Digite aqui, por gentileza" style="display: none;">
                     </label>
                 </fieldset>
 
@@ -230,52 +230,71 @@
 
                 <fieldset>
                     <legend>9. Agora, assinale a substância ou às substâncias psicoativas que a pessoa que precisa de ajuda faz uso:</legend>
-                    <input type="checkbox" name="substance" id="alcool" value="Álcool">
-                    <label for="alcool">Álcool</label><br>
-                
-                    <input type="checkbox" name="substance" id="tabaco" value="Tabaco/Cigarro">
-                    <label for="tabaco">Tabaco/Cigarro</label><br>
-                
-                    <input type="checkbox" name="substance" id="crack" value="Crack: (Mesclado, Pitico, Raspa)">
-                    <label for="crack">Crack: (Mesclado, Pitico, Raspa)</label><br>
-                
-                    <input type="checkbox" name="substance" id="maconha" value="Maconha: (Skank, haxixe, k2)">
-                    <label for="maconha">Maconha: (Skank, haxixe, k2)</label><br>
-                
-                    <input type="checkbox" name="substance" id="cocaina" value="Cocaína: (Merla, Oxi...)">
-                    <label for="cocaina">Cocaína: (Merla, Oxi...)</label><br>
-                
-                    <input type="checkbox" name="substance" id="solventes" value="Solventes: (Cola, loló, lança perfume, anti-respingo de solda)">
-                    <label for="solventes">Solventes: (Cola, loló, lança perfume, anti-respingo de solda)</label><br>
-                
-                    <input type="checkbox" name="substance" id="tranquilizantes" value="Tranquilizantes: (Diazepam, Rivotril, rupinol..)">
-                    <label for="tranquilizantes">Tranquilizantes: (Diazepam, Rivotril, rupinol..)</label><br>
-                
-                    <input type="checkbox" name="substance" id="anestesicos" value="Anestésicos: (Boa noite cinderela, Ketamina)">
-                    <label for="anestesicos">Anestésicos: (Boa noite cinderela, Ketamina)</label><br>
-                
-                    <input type="checkbox" name="substance" id="alucinogenos_naturais" value="Alucinógenos naturais: (Cogumelo, zabumba, Ayahuasca, Sto Daime, Ibogaína)">
-                    <label for="alucinogenos_naturais">Alucinógenos naturais: (Cogumelo, zabumba, Ayahuasca, Sto Daime, Ibogaína)</label><br>
-                
-                    <input type="checkbox" name="substance" id="alucinogenos_sinteticos" value="Alucinógenos sintéticos: (LSD, Doce, DMT, aranha)">
-                    <label for="alucinogenos_sinteticos">Alucinógenos sintéticos: (LSD, Doce, DMT, aranha)</label><br>
-                
-                    <input type="checkbox" name="substance" id="ecstasy" value="Ecstasy: (Bala, MDMA, MD, Mandy)">
-                    <label for="ecstasy">Ecstasy: (Bala, MDMA, MD, Mandy)</label><br>
-                
-                    <input type="checkbox" name="substance" id="anfetaminas" value="Anfetaminas: (Rebite, speed, ritalina)">
-                    <label for="anfetaminas">Anfetaminas: (Rebite, speed, ritalina)</label><br>
-                
-                    <input type="checkbox" name="substance" id="opioides" value="Opióides: (Remédios para dor, morfina, metadona, tramal)">
-                    <label for="opioides">Opióides: (Remédios para dor, morfina, metadona, tramal)</label><br>
-                
-                    <input type="checkbox" name="substance" id="heroina" value="Heroína">
-                    <label for="heroina">Heroína</label><br>
-                
-                    <input type="checkbox" name="substance" id="outra" value="Outra">
-                    <label for="outra">Outra (as)</label><br>
-                    <input type="text" name="outra_substancia" id="outra_substancia">
+                    <div class="checkbox-options">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="alcool" value="Álcool">
+                            Álcool
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="tabaco" value="Tabaco/Cigarro">
+                            Tabaco/Cigarro
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="crack" value="Crack: (Mesclado, Pitico, Raspa)">
+                            Crack: (Mesclado, Pitico, Raspa)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="maconha" value="Maconha: (Skank, haxixe, k2)">
+                            Maconha: (Skank, haxixe, k2)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="cocaina" value="Cocaína: (Merla, Oxi...)">
+                            Cocaína: (Merla, Oxi...)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="solventes" value="Solventes: (Cola, loló, lança perfume, anti-respingo de solda)">
+                            Solventes: (Cola, loló, lança perfume, anti-respingo de solda)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="tranquilizantes" value="Tranquilizantes: (Diazepam, Rivotril, rupinol..)">
+                            Tranquilizantes: (Diazepam, Rivotril, rupinol..)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="anestesicos" value="Anestésicos: (Boa noite cinderela, Ketamina)">
+                            Anestésicos: (Boa noite cinderela, Ketamina)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="alucinogenos_naturais" value="Alucinógenos naturais: (Cogumelo, zabumba, Ayahuasca, Sto Daime, Ibogaína)">
+                            Alucinógenos naturais: (Cogumelo, zabumba, Ayahuasca, Sto Daime, Ibogaína)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="alucinogenos_sinteticos" value="Alucinógenos sintéticos: (LSD, Doce, DMT, aranha)">
+                            Alucinógenos sintéticos: (LSD, Doce, DMT, aranha)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="ecstasy" value="Ecstasy: (Bala, MDMA, MD, Mandy)">
+                            Ecstasy: (Bala, MDMA, MD, Mandy)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="anfetaminas" value="Anfetaminas: (Rebite, speed, ritalina)">
+                            Anfetaminas: (Rebite, speed, ritalina)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="opioides" value="Opióides: (Remédios para dor, morfina, metadona, tramal)">
+                            Opióides: (Remédios para dor, morfina, metadona, tramal)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="heroina" value="Heroína">
+                            Heroína
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="substance" id="outra" value="Outra" onclick="toggleOutraSubstancia()">
+                            Outra (as)
+                        </label>
+                        <input type="text" name="outra_substancia" id="outra_substancia">
+                    </div>
                 </fieldset>
+                
                 
                
                 <fieldset>
@@ -287,48 +306,23 @@
                 <fieldset>
                     <legend>11. Como você ficou sabendo desse nosso canal de atendimento virtual?</legend>
                     
-                    <input type="checkbox" name="source" id="internet" value="Pesquisa na internet">
-                    <label for="internet">Pesquisa na internet</label><br>
-                
-                    <input type="checkbox" name="source" id="redes_sociais" value="Redes Sociais nos canais da Prefeitura">
-                    <label for="redes_sociais">Redes Sociais nos canais da Prefeitura</label><br>
-                
-                    <input type="checkbox" name="source" id="terminais_integracao" value="Terminais de Integração (ETUFOR)">
-                    <label for="terminais_integracao">Terminais de Integração (ETUFOR)</label><br>
-                
-                    <input type="checkbox" name="source" id="onibus_coletivo" value="Ônibus Coletivo (ETUFOR)">
-                    <label for="onibus_coletivo">Ônibus Coletivo (ETUFOR)</label><br>
-                
-                    <input type="checkbox" name="source" id="central_190" value="Central 190">
-                    <label for="central_190">Central 190</label><br>
-                
-                    <input type="checkbox" name="source" id="propaganda_tv" value="Propaganda na Tv">
-                    <label for="propaganda_tv">Propaganda na Tv</label><br>
-                
-                    <input type="checkbox" name="source" id="panfleto" value="Panfleto, Flyer, cartaz">
-                    <label for="panfleto">Panfleto, Flyer, cartaz</label><br>
-                
-                    <input type="checkbox" name="source" id="familiares" value="Por indicação de familiares">
-                    <label for="familiares">Por indicação de familiares</label><br>
-                
-                    <input type="checkbox" name="source" id="amigos" value="Por indicação de amigos">
-                    <label for="amigos">Por indicação de amigos</label><br>
-                
-                    <input type="checkbox" name="source" id="grupo_virtual" value="Indicação de participantes do grupo virtual de famílias da CPDrogas">
-                    <label for="grupo_virtual">Indicação de participantes do grupo virtual de famílias da CPDrogas</label><br>
-                
-                    <input type="checkbox" name="source" id="tecnicos_prefeitura" value="Por indicação de profissionais/técnicos da Prefeitura">
-                    <label for="tecnicos_prefeitura">Por indicação de profissionais/técnicos da Prefeitura</label><br>
-                
-                    <input type="checkbox" name="source" id="tecnicos_outras" value="Por indicação de profissionais/técnicos de outras instituições">
-                    <label for="tecnicos_outras">Por indicação de profissionais/técnicos de outras instituições</label><br>
-                
-                    <input type="checkbox" name="source" id="outros" value="Outros">
-                    <label for="outros">Outros</label><br>
-                    <input type="text" name="outros_especificar" id="outros_especificar"><br>
-                    
-                    <input type="checkbox" name="source" id="nao_informado" value="Não informado">
-                    <label for="nao_informado">Não informado</label>
+                    <div class="checkbox-options">
+                        <label class="checkbox-option" for="internet"><input type="checkbox" name="source" id="internet" value="Pesquisa na internet">Pesquisa na internet</label>
+                        <label class="checkbox-option" for="redes_sociais"><input type="checkbox" name="source" id="redes_sociais" value="Redes Sociais nos canais da Prefeitura">Redes Sociais nos canais da Prefeitura</label>
+                        <label class="checkbox-option" for="terminais_integracao"><input type="checkbox" name="source" id="terminais_integracao" value="Terminais de Integração (ETUFOR)">Terminais de Integração (ETUFOR)</label>
+                        <label class="checkbox-option" for="onibus_coletivo"><input type="checkbox" name="source" id="onibus_coletivo" value="Ônibus Coletivo (ETUFOR)">Ônibus Coletivo (ETUFOR)</label>
+                        <label class="checkbox-option" for="central_190"><input type="checkbox" name="source" id="central_190" value="Central 190">Central 190</label>
+                        <label class="checkbox-option" for="propaganda_tv"><input type="checkbox" name="source" id="propaganda_tv" value="Propaganda na Tv">Propaganda na Tv</label>
+                        <label class="checkbox-option" for="panfleto"><input type="checkbox" name="source" id="panfleto" value="Panfleto, Flyer, cartaz">Panfleto, Flyer, cartaz</label>
+                        <label class="checkbox-option" for="familiares"><input type="checkbox" name="source" id="familiares" value="Por indicação de familiares">Por indicação de familiares</label>
+                        <label class="checkbox-option" for="amigos"><input type="checkbox" name="source" id="amigos" value="Por indicação de amigos">Por indicação de amigos</label>
+                        <label class="checkbox-option" for="grupo_virtual"><input type="checkbox" name="source" id="grupo_virtual" value="Indicação de participantes do grupo virtual de famílias da CPDrogas">Indicação de participantes do grupo virtual de famílias da CPDrogas</label>
+                        <label class="checkbox-option" for="tecnicos_prefeitura"><input type="checkbox" name="source" id="tecnicos_prefeitura" value="Por indicação de profissionais/técnicos da Prefeitura">Por indicação de profissionais/técnicos da Prefeitura</label>
+                        <label class="checkbox-option" for="tecnicos_outras"><input type="checkbox" name="source" id="tecnicos_outras" value="Por indicação de profissionais/técnicos de outras instituições">Por indicação de profissionais/técnicos de outras instituições</label>
+                        <label class="checkbox-option" for="nao_informado"><input type="checkbox" name="source" id="nao_informado" value="Não informado">Não informado</label>
+                        <label class="checkbox-option" for="outros"><input type="checkbox" name="source" id="outros" value="Outros" onclick="toggleOutraFonte()">Outros</label>
+                        <input type="text" name="outros_especificar" id="outros_especificar" style="display: none;">
+                    </div>
                 </fieldset>
                 
 
@@ -338,9 +332,14 @@
     </main>
 
     <footer>
-        <img src="logoPref.png" alt="" srcset="">
-        <p>&copy; 2024 Coordenadoria Especial de Políticas sobre Drogas (COESD). Todos os direitos reservados.</p>
+        <figure><img src="logoPref.png" alt="Logo Prefeitura" srcset=""></figure>
+        <div>
+            <h4>&copy; 2024 Coordenadoria Especial de Políticas sobre Drogas (COESD). Todos os direitos reservados.</h4>
+            <address>Av. Rogaciano Leite, 1729 - Eng. Luciano Cavalcante, Fortaleza - CE, 60810-470</address>
+            <p>Número de contato: <strong>0800.032.1472</strong></p>
+        </div>
     </footer>
+    
 </body>
 </html>
 
